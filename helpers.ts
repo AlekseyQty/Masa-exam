@@ -1,5 +1,12 @@
+import * as _ from "underscore";
+
 export function getRandomValueFromArray(array: string[]): string {
     return array[Math.floor(Math.random() * array.length)];
+}
+
+export function getRandomValueFromArrayWithout(array: string[], exclude: string): string {
+    const arrayWithoutEntry = _.without(array, exclude);
+    return arrayWithoutEntry[Math.floor(Math.random() * arrayWithoutEntry.length)];
 }
 
 export function getRandomBirthDate(): Date {
