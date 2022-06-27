@@ -15,4 +15,8 @@ export class Student implements IStudent {
         this.lastName = lastName;
         this.birthDate = birthDate;
     }
+
+    fullName(): string {
+        return `${this.firstName} ${this.lastName}`;
+    }
 }

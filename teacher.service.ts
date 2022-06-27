@@ -10,4 +10,8 @@ export class Teacher implements ITeacher {
         this.lastName = lastName;
         this.professions = [...professions]
     }
+
+    fullName(): string {
+        return `${this.firstName} ${this.lastName}`;
+    }
 }
