@@ -1,8 +1,8 @@
-import { School } from "./entities";
-import { getClassYoungestStudent as getClassYoungestStudentFullName, initializeSchool, printSchool } from "./services";
+// import { School } from "./entities";
+// import { getClassYoungestStudent as getClassYoungestStudentFullName, initializeSchool, printSchool } from "./services";
 
-const school: School = initializeSchool();
+// const school: School = initializeSchool();
 
-printSchool(school);
+// printSchool(school);
 
-console.log(getClassYoungestStudentFullName(school.classes[0]));
+// console.log(getClassYoungestStudentFullName(school.classes[0]));
