@@ -26,7 +26,7 @@ export function initialize(): void {
     schoolCreatedByHand.printSchool();
 
     // Task 8
-    const schoolGenerated = createSchoolDynamically(3, 4);
+    const schoolGenerated = createSchoolDynamically(3);
 
     // Task 1,4,6
     schoolGenerated.printSchool();

@@ -8,7 +8,7 @@ export interface IStudent {
     firstName: string;
     lastName: string;
     birthDate: Date;
-    age: () => number
+    age: () => number;
 };
 
 export interface IClassroom {

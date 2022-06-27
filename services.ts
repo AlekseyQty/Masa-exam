@@ -28,15 +28,16 @@ export function transferStudent(fullName: string, fromClassroom: Classroom, toCl
     }
 }
 
-export function createSchoolDynamically(class_number: number, class_student_limit: number = 20): School {
+export function createSchoolDynamically(classNumber: number, classStudentLimit: number = 30): School {
     const generatedClasses: Classroom[] = [];
 
-    for (let i = 0; i < class_number; i++) {
+    for (let i = 0; i < classNumber; i++) {
         const className: string = getRandomValueFromArray(classNames);
         const generatedStudents: Student[] = [];
         const generatedTeacher: Teacher = new Teacher(getRandomValueFromArray(firstNames), getRandomValueFromArray(lastNames), [className, getRandomValueFromArrayWithout(classNames, className)]);
+        const randomStudentLimit: number = Math.floor(Math.random() * classStudentLimit) + 1;
 
-        for (let j = 0; j < class_student_limit; j++) {
+        for (let j = 0; j < randomStudentLimit; j++) {
             const generatedStudent: Student = new Student(getRandomValueFromArray(firstNames), getRandomValueFromArray(lastNames), getRandomBirthDate());
             generatedStudents.push(generatedStudent);
         }
