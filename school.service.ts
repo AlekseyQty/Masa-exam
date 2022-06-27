@@ -1,8 +1,8 @@
 import * as _ from "underscore";
 
 import { Classroom } from "./classroom.service";
-import { ISchool } from "./entities";
 import { Student } from "./student.service";
+import { ISchool } from "./entities";
 
 export class School implements ISchool {
     name: string;
@@ -14,7 +14,7 @@ export class School implements ISchool {
         this.name = name;
         this.address = address;
         this.phone = phone;
-        this.classes = classes
+        this.classes = classes;
     }
 
     printSchool(): void {
@@ -32,26 +32,6 @@ export class School implements ISchool {
             console.log(`Teacher: ${classroom.teacher.fullName()} ${classroom.teacher.professions.join(", ")}`)
             console.log("Students:")
             _.each(_.sortBy(_.sortBy(classroom.students, "firstName"), "lastName"), (student: Student, index: number) => {
-                console.log(`${index + 1} ${student.fullName()}: ${student.age()}`)
-            });
-            console.log("")
-        });
-    }
-
-    printSchoolUnsorted(): void {
-        console.log("School data:");
-        console.log("============");
-        console.log(this.name);
-        console.log(this.address);
-        console.log(this.phone);
-        console.log("");
-        console.log("Classes");
-        console.log("=======");
-        _.each(this.classes, (classroom: Classroom, index: number) => {
-            console.log(`Class ${index + 1}: ${classroom.name}`);
-            console.log(`Teacher: ${classroom.teacher.fullName()} ${classroom.teacher.professions.join(", ")}`)
-            console.log("Students:")
-            _.each(classroom.students, (student: Student, index: number) => {
                 console.log(`${index + 1} ${student.fullName()}: ${student.age()}`)
             });
             console.log("")

@@ -1,7 +1,7 @@
 import * as _ from "underscore";
 
 import { Classroom } from "./classroom.service";
-import { classNames, firstNames, Geography, lastNames, Physics, schoolNames } from "./constants";
+import { classNames, firstNames, lastNames, schoolNames } from "./constants";
 import { getRandomBirthDate, getRandomValueFromArray } from "./helpers";
 import { School } from "./school.service";
 import { Student } from "./student.service";
@@ -10,6 +10,7 @@ import { Teacher } from "./teacher.service";
 
 export function transferStudent(fullName: string, fromClassroom: Classroom, toClassrom: Classroom): void {
     try {
+        // I use non-null assertion operator because result of _.find can be undefined
         const movingStudent: Student = _.find(fromClassroom.students, (student: Student) => {
             return student.fullName() === fullName;
         })!
@@ -19,7 +20,7 @@ export function transferStudent(fullName: string, fromClassroom: Classroom, toCl
             toClassrom.students.push(movingStudent);
         }
         else {
-            console.log(`There is no student with name ${fullName} in classroom ${fromClassroom.name}`)
+            console.log(`There is no student with name ${fullName} in classroom ${fromClassroom.name}`);
         }
     }
     catch (error) {

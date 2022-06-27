@@ -23,7 +23,7 @@ export class Classroom implements IClassroom {
         // Check if there are more than one student with the same birth date
         if (studentsSortedByAge.length > 1) {
             if (studentsSortedByAge[0].birthDate.getTime() == studentsSortedByAge[1].birthDate.getTime()) {
-                console.log("There are some students with the same age");
+                console.log("There are some students with the same birthdate, returning first one found");
             }
         }
     
