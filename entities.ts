@@ -1,7 +1,3 @@
-import { Classroom } from "./classroom.service";
-import { Student } from "./student.service";
-import { Teacher } from "./teacher.service";
-
 export interface ITeacher {
     firstName: string;
     lastName: string;
@@ -17,13 +13,13 @@ export interface IStudent {
 
 export interface IClassroom {
     name: string;
-    teacher: Teacher;
-    students: Student[];
+    teacher: ITeacher;
+    students: IStudent[];
 };
 
 export interface ISchool {
     name: string;
     address: string;
     phone: string;
-    classes: Classroom[];
+    classes: IClassroom[];
 }
