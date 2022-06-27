@@ -30,17 +30,16 @@ export function transferStudent(fullName: string, fromClassroom: Classroom, toCl
 export function createSchoolDynamically(class_number: number, class_student_limit: number = 20): School {
     const generatedClasses: Classroom[] = [];
 
-    for (let i=0; i<class_number; i++) {
+    for (let i = 0; i < class_number; i++) {
         const generatedStudents: Student[] = [];
         const generatedTeacher: Teacher = new Teacher(getRandomValueFromArray(firstNames), getRandomValueFromArray(lastNames), [getRandomValueFromArray(classNames)]);
 
-        for (let j=0; j<class_student_limit; j++) {
+        for (let j = 0; j < class_student_limit; j++) {
             const generatedStudent: Student = new Student(getRandomValueFromArray(firstNames), getRandomValueFromArray(lastNames), getRandomBirthDate());
             generatedStudents.push(generatedStudent);
         }
 
-        const generatedClassroom = new Classroom(getRandomValueFromArray(classNames), generatedTeacher, generatedStudents);
-        generatedClasses.push(generatedClassroom);
+        generatedClasses.push(new Classroom(getRandomValueFromArray(classNames), generatedTeacher, generatedStudents));
     }
 
     const generatedSchool = new School(getRandomValueFromArray(schoolNames), "Rockford, Minnesota", "318-629-0333", generatedClasses);

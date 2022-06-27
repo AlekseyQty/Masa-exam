@@ -8,7 +8,7 @@ export class Teacher implements ITeacher {
     constructor(firstName: string, lastName: string, professions: string[]) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.professions = [...professions]
+        this.professions = professions
     }
 
     fullName(): string {

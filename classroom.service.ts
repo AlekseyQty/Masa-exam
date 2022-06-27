@@ -12,7 +12,7 @@ export class Classroom implements IClassroom {
     constructor(name: string, teacher: Teacher, students: Student[]) {
         this.name = name;
         this.teacher = teacher;
-        this.students = [...students]
+        this.students = students;
     }
 
     getClassYoungestStudent(): Student {

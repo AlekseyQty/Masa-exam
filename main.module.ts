@@ -21,6 +21,8 @@ export function initialize(): void {
     // transferStudent("Alex Bolt", newMathClass, newHistoryClass);
     // newSchool.printSchool();
     // // console.log(newMathClass);
-    const schoolGenerated = createSchoolDynamically(5, 5);
+    const schoolGenerated = createSchoolDynamically(5, 4);
+    // schoolGenerated.printSchoolUnsorted();
     schoolGenerated.printSchool();
+    // schoolGenerated.printSchoolUnsorted();
 }
