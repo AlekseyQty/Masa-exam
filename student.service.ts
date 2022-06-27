@@ -1,9 +1,4 @@
-export interface IStudent {
-    firstName: string;
-    lastName: string;
-    birthDate: Date;
-    age: () => number
-};
+import { IStudent } from "./entities";
 
 export class Student implements IStudent {
     firstName: string;

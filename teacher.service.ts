@@ -1,8 +1,4 @@
-export interface ITeacher {
-    firstName: string;
-    lastName: string;
-    professions: string[];
-};
+import { ITeacher } from "./entities";
 
 export class Teacher implements ITeacher {
     firstName: string;
