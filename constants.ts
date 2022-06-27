@@ -24,3 +24,20 @@ export const lastNames: string[] = [
     "Kukushkin",
     "Fyodorov"
 ];
+
+export const schoolNames: string[] = [
+    "School of Happy Valley",
+    "Highgate School and Academy",
+    "HighImpact Institute",
+    "Mentoring the Future",
+    "Wisdom Elementary School"
+];
+
+export const classNames: string[] = [
+    "History",
+    "Chemistry",
+    "Physics",
+    "Geography",
+    "Hebrew",
+    "Mathematics"
+];

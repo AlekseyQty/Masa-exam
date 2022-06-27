@@ -1,25 +1,25 @@
-export type Teacher = {
+export interface ITeacher {
     firstName: string;
     lastName: string;
     professions: string[];
 };
 
-export type Student = {
+export interface IStudent {
     firstName: string;
     lastName: string;
     birthDate: Date;
     age: () => number
 };
 
-export type Classroom = {
+export interface IClassroom {
     name: string;
-    teacher: Teacher;
-    students: Student[];
+    teacher: ITeacher;
+    students: IStudent[];
 };
 
-export type School = {
+export interface ISchool {
     name: string;
     address: string;
     phone: string;
-    classes: Classroom[];
+    classes: IClassroom[];
 }
