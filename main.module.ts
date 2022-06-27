@@ -20,17 +20,21 @@ export function initialize(): void {
     const historyClass: Classroom = new Classroom("History", teacher2, [student3]);
     const schoolCreatedByHand: School = new School("Small school", "New York", "+79813332244", [mathClass, historyClass]);
 
-    // transferStudent() function test
+    // Task 7
     schoolCreatedByHand.printSchool();
     transferStudent("Alex Bolt", mathClass, historyClass);
     schoolCreatedByHand.printSchool();
 
+    // Task 8
     const schoolGenerated = createSchoolDynamically(3, 4);
 
+    // Task 1,4,6
     schoolGenerated.printSchool();
 
-    // getClassYoungestStudent() method test
+    // Task 5
     _.each(schoolGenerated.classes, (currentClass: Classroom) => {
         console.log(currentClass.getClassYoungestStudent());
     })
+
+    // Task 2,3 solution in contstants.ts file
 }
